@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --color-text: #ffffff;
+    --color-border: #ced4da;
+    --color-bg-input: rgba(255, 255, 255, 0.60);
+    --color-orange: #F24F00;
+}
+
+body {
+    background: rgb(15,15,15);
+    background: linear-gradient(90deg, rgba(15,15,15,1) 0%, rgba(39,106,120,1) 100%);
+    padding: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+  }
+
+.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.navbar-collapse {
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    margin-left: 5rem;
+}
+
+.nav-link:hover {
+    color: var(--color-orange);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--color-orange);
+}
+
+.avatar {
+    width: 5rem;
+}
+
+/* Page d'accueil */
+
+.birthday-banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.birthday-logo {
+    width: 15rem;
+}
+
+.birthday-title {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.birthday-title h1 {
+    font-size: 3rem;
+}
+
+.birthday-save {
+    width: 35rem;
+}
+
+.birthday-text {
+    font-size: 1.5rem;
+}
+
+.birthday-text span{
+    text-decoration:line-through;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+    .birthday-save {
+        width: 10rem;
+    }
+    .birthday-logo {
+        width: 10rem;
+    }
+}
+
+/* Page d'inscription */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: .375rem;
+    margin: 2rem auto;
+}
+
+.form {
+    padding: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+p {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.form-control, .form-select {
+    background-color: var(--color-bg-input);
+}
+
+.form-check {
+    margin: 1.5rem;
+    padding-left: 0;
+}
+
+.form-check-radio {
+    margin-bottom: 1rem;
+}
+
+.form-input {
+    margin-bottom: 2rem;
+}
+
+.label-text {
+    color: var(--color-text);
+}
+
+.contact-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-custom {
+    background-color: rgba(249, 211, 97, 0);
+    border-color: var(--color-orange);
+}
+
+.btn-custom:hover {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+/* Page d'erreur */
+
+.error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-message-image {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    background-color: #ffffff85;
+}
+
+.error-message h3{
+    margin: 2rem 0;
+    color: #fff;
+}
+
+.error-message h4{
+    margin: 2rem 0;
+    color: #fff;
+}
+
+/* Page de succès */
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-message-image {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    background-color: #ffffff85;
+}
+
+.success-message h3{
+    margin: 2rem 0;
+    color: #fff;
+}
+
+.success-message h4{
+    margin: 2rem 0;
+    color: #fff;
+}
+
+/* Pages en construction */
+
+.construction {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.construction-image {
+    width: 80%;
+    margin: 2rem;
+}
