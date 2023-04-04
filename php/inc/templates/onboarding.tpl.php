@@ -1,18 +1,21 @@
 <?php
 require __DIR__ . '../../database/db.php';
 ?>
+<div class="standard-banner">
+    <h2>On boarding</h2>
+    <p class="punchline">"On est au bon endroit au bon moment qu’une seule fois dans sa vie"</p>
+</div>
 
-<div class="container">
-
+<div class="container-aside">
+    <div class="container">
         <form action="" method="POST" class="form">
-
             <div class="form-input">
                 <label class="label-text" for="name">Prénom - Nom</label>
                 <select class="form-select" name="name">
                     <option>Selectionnez votre nom</option>
-                <?php foreach ($userList as $user) : ?>
-                    <option><?= $user['name'] ?></option>
-                <?php endforeach; ?>
+                    <?php foreach ($userList as $user) : ?>
+                        <option><?= $user['name'] ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
 
@@ -58,3 +61,19 @@ require __DIR__ . '../../database/db.php';
             });
         </script>
     </div>
+
+    <div class="aside">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Personnes présentes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The table body</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+</div>

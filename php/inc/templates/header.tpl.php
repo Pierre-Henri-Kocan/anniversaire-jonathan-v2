@@ -22,18 +22,18 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link <?= ( $pageToDisplay == 'home' ) ? 'active' : '' ; ?>" href="./">Accueil</a>
+                        <a class="nav-link <?= ($pageToDisplay == 'home') ? 'active' : ''; ?>" href="./">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= ( $pageToDisplay == 'onboarding' ) ? 'active' : '' ; ?>" href="index.php?page=onboarding">On boarding</a>
+                        <a class="nav-link <?= ($pageToDisplay == 'onboarding') ? 'active' : ''; ?>" href="index.php?page=onboarding">On boarding</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= ( $pageToDisplay == 'goodtips' ) ? 'active' : '' ; ?>" href="index.php?page=goodtips">Les bons tuyaux</a>
+                        <a class="nav-link <?= ($pageToDisplay == 'goodtips') ? 'active' : ''; ?>" href="index.php?page=goodtips">Les bons tuyaux</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= ( $pageToDisplay == 'challenge' ) ? 'active' : '' ; ?>" href="index.php?page=challenge">Challenge</a>
+                        <a class="nav-link <?= ($pageToDisplay == 'challenge') ? 'active' : ''; ?>" href="index.php?page=challenge">Challenge</a>
                     </li>
-</ul>
+                </ul>
             </div>
         </div>
     </nav>

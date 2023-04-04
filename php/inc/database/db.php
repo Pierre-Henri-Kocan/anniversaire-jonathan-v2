@@ -78,4 +78,3 @@ Jonathan, qui fête bientôt ses 40 ans';
     }
 }
 
-
