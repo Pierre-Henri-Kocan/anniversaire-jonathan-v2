@@ -1,9 +1,10 @@
 <?php
 require __DIR__ . '../../database/db.php';
+require __DIR__ . '../../database/data.php';
 ?>
 <div class="standard-banner">
     <h2>On boarding</h2>
-    <p class="punchline">"On est au bon endroit au bon moment qu’une seule fois dans sa vie"</p>
+    <p class="punchline">"On est au bon endroit et au bon moment qu’une seule fois dans sa vie"</p>
 </div>
 
 <div class="container-aside">
@@ -27,21 +28,21 @@ require __DIR__ . '../../database/db.php';
             <div class="form-check">
                 <div class="form-check-radio">
                     <input type="radio" id="oui" name="present" value="true" required>
-                    <label class="label-text" for="present">Je serais présent</label>
+                    <label class="label-text" for="present">Je serai présent</label>
                 </div>
                 <div class="form-check-radio">
                     <input type="radio" id="non" name="present" value="false">
-                    <label class="label-text" for="present">Je ne serais pas présent</label>
+                    <label class="label-text" for="present">Je ne serai pas présent</label>
                 </div>
             </div>
 
             <div>
                 <div class="form-input">
-                    <label class="label-text" for="adult">Nombre d'adulte</label>
+                    <label class="label-text" for="adult">Nombre d'adultes</label>
                     <input class="form-control" min="0" max="10" type="number" id="adult" name="adult" required>
                 </div>
                 <div class="form-input">
-                    <label class="label-text" for="kid">Nombre d'enfant</label>
+                    <label class="label-text" for="kid">Nombre d'enfants</label>
                     <input class="form-control" min="0" max="10" type="number" id="kid" name="kid" required>
                 </div>
             </div>
@@ -63,17 +64,56 @@ require __DIR__ . '../../database/db.php';
     </div>
 
     <div class="aside">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2">Personnes présentes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>The table body</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="aside-answered">
+            <h3 class="aside-h3">Personnes ayant répondu</h3>
+            <ul>
+                <?php if (!$presentName == '') : ?>
+                    <?php foreach ($presentName as $user) : ?>
+                        <li class="aside-li">
+                            <td class="aside-td"><?= $user['name'] ?></td>
+                        </li>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <li class="aside-li-nb">
+                        <td class="aside-td">0</td>
+                    </li>
+                <?php endif; ?>
+            </ul>
+            <h3 class="aside-h3"><a href="mailto:ph.kocan@icloud.com?subject=Demande de modification&cc=grimal.jonathan@gmail.com">Besoin d'apporter une modification ou une précision ?<br>Cliquez ici</h3></a>
         </div>
+        <div class="aside-adult-kid">
+            <div class="aside-adult">
+                <h3 class="aside-h3">Adultes présents</h3>
+                <ul>
+                    <?php if (!$nb_adult_present == 0) : ?>
+                        <?php foreach ($nb_adult_present as $user) : ?>
+                            <li class="aside-li-nb">
+                                <td class="aside-td"><?= $user["number"] ?></td>
+                            </li>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <li class="aside-li-nb">
+                            <td class="aside-td">0</td>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+            <div class="aside-kid">
+                <h3 class="aside-h3">Enfants présents</h3>
+                <ul>
+                    <?php if (!$nb_kid_present == 0) : ?>
+                        <?php foreach ($nb_kid_present as $user) : ?>
+                            <li class="aside-li-nb">
+                                <td class="aside-td"><?= $user["number"] ?></td>
+                            </li>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <li class="aside-li-nb">
+                            <td class="aside-td">0</td>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

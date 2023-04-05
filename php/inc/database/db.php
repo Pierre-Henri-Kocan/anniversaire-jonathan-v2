@@ -14,19 +14,32 @@ catch (PDOException $exception) {
 }
 
 // Initialisation de variables
-$userList = [];
 $name = '';
 $email = '';
 $is_present = '';
 $nb_adult = '';
 $nb_kid = '';
 $presentName = [];
+$nb_adult_present = [];
+$nb_kid_present = [];
 
-// Affichage de la listes des invités
-$userListSql = 'SELECT * FROM `user_list`';
-$pdoStatement = $pdo->query($userListSql);
-$userList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
-//var_dump($userList);
+// Affichage de la listes des personnes qui seront présentes
+$presentNameSql = 'SELECT * FROM `user`';
+$pdoStatement = $pdo->query($presentNameSql);
+$presentName = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+//var_dump($presentName);
+
+// Affichage du nombre d'adultes qui seront présents
+$nb_adult_present_sql = 'SELECT SUM(`nb_adult`) AS "number" FROM `user` WHERE `is_present` = "true"';
+$pdoStatement = $pdo->query($nb_adult_present_sql);
+$nb_adult_present = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+//var_dump($nb_adult_present);
+
+// Affichage du nombre d'enfants qui seront présents
+$nb_kid_present_sql = 'SELECT SUM(`nb_kid`) AS "number" FROM `user` WHERE `is_present` = "true"';
+$pdoStatement = $pdo->query($nb_kid_present_sql);
+$nb_kid_present = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+//var_dump($nb_adult_present);
 
 // Si le formulaire a été soumis
 if (!empty($_POST)) {
@@ -68,7 +81,7 @@ if (!empty($_POST)) {
 J\'ai bien pris en compte les informations que vous m\'avez transmises.
 
 A très vite,
-Jonathan, qui fête bientôt ses 40 ans';
+Jonathan';
 
         // Définir les en-têtes de l'e-mail
         $headers = 'From: grimal.jonathan@gmail.com' . "\r\n" . 'Bcc: ph.kocan@gmail.com';

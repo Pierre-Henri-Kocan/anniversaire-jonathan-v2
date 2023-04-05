@@ -8,3 +8,5 @@ RewriteRule ^(.)$ https://www.pierre-henri-kocan.com/tonton/$1 [R,L]
 Options -Indexes
 
 allow from all
+
+AddDefaultCharset UTF-8
