@@ -37,3 +37,55 @@
             </div>
         </div>
     </nav>
+
+    <!-- <section id="banner">
+        <h1>Site un peu mou ? Besoin d'un remontant ?</h1>
+        <p>Votre développeur préféré a <span class="banner-strong">LA</span> solution !</p>
+        <p>Cliquez sur l'un des boutons ci-dessous pour découvrir l'escort qui nous charmera toute la soirée !</p>
+        <div class="banner-pics">
+            <a href="/php/public/images/brice-femme.jpg" target="_blank" class="banner-button">Pour vous mesdames</a>
+            <a href="/php/public/images/brice-homme.jpg" target="_blank" class="banner-button">Pour vous messieurs</a>
+        </div>
+        <div class="banner-time" id="countdown">Temps restant pour en profiter :
+            <span class="banner-time" id="days"></span> jours,
+            <span class="banner-time" id="hours"></span> heures,
+            <span class="banner-time" id="minutes"></span> minutes,
+            <span class="banner-time" id="seconds"></span> secondes
+        </div>
+    </section>
+
+    <script>
+        var startSeconds;
+        if (localStorage.getItem('startSeconds')) {
+            startSeconds = parseInt(localStorage.getItem('startSeconds'));
+        } else {
+            startSeconds = Date.now() + (604800 * 1000); // temps de départ, une semaine plus tard
+            localStorage.setItem('startSeconds', startSeconds);
+        }
+
+        var seconds = Math.round((startSeconds - Date.now()) / 1000);
+
+        function countdown() {
+            var days = Math.floor(seconds / (24 * 60 * 60));
+            var hours = Math.floor((seconds % (24 * 60 * 60)) / (60 * 60));
+            var minutes = Math.floor((seconds % (60 * 60)) / 60);
+            var remainingSeconds = seconds % 60;
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = remainingSeconds;
+
+            if (seconds == 0) {
+                clearInterval(interval);
+                var banner = document.getElementById("banner");
+                banner.style.display = "none";
+                localStorage.removeItem('startSeconds');
+            } else {
+                seconds--;
+                localStorage.setItem('startSeconds', Date.now() + (seconds * 1000));
+            }
+        }
+
+        var interval = setInterval(countdown, 1000);
+    </script> -->

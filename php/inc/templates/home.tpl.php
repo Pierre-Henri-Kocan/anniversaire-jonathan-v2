@@ -1,3 +1,5 @@
+
+
 <div class="birthday-banner">
     <img class="birthday-logo" src="/php/public/images/speed-limit-2.png" alt="">
     <div class="birthday-title">
@@ -18,6 +20,6 @@
     <p class="light-text"><br>- mieux vaut participer qu’être parti pisser -</p>
     <p class="birthday-text">Bon courage,</p>
     <p class="birthday-text"><span class="italic-text">Le Webmaster</span></p>
-</p>
+    </p>
     <a class="btn btn-primary btn-custom" href="index.php?page=onboarding">Je m'enregistre</a>
 </div>

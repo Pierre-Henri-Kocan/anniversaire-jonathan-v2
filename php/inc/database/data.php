@@ -8,7 +8,7 @@ $userList = [
         'name' => "Anaïs Bougardier & Miguel Pires",
     ],
     3 => [
-        'name' => "Anne-Caroline & Julien Petit",
+        'name' => "Anne-Carole & Julien Petit",
     ],
     4 => [
         'name' => "Béatrice & Thierry Trehoux",

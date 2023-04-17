@@ -412,3 +412,60 @@ h2 {
     width: 80%;
     margin: 2rem;
 }
+
+/* Prank Brice */
+
+#banner {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 0 1rem;
+    background-color: var(--color-orange);
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .banner-strong {
+    font-weight: bold;
+  }
+  
+  #banner h1 {
+    color: var(--color-text);
+    font-size: 2rem;
+    font-weight:bold;
+    padding: 1rem;
+  }
+  
+  #banner p {
+    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .banner-pics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .banner-button {
+    background-color: #ffffff;
+    color: var(--color-orange);
+    border: none;
+    margin: 1.5rem 1rem;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .banner-time {
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: bold;
+  }
