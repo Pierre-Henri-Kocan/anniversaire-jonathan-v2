@@ -28,7 +28,7 @@
                         <a class="nav-link <?= ($pageToDisplay == 'onboarding') ? 'active' : ''; ?>" href="index.php?page=onboarding">On boarding</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= ($pageToDisplay == 'goodtips') ? 'active' : ''; ?>" href="index.php?page=goodtips">Les bons tuyaux</a>
+                        <a class="nav-link <?= ($pageToDisplay == 'goodtips') ? 'active' : ''; ?>" href="index.php?page=goodtips">Réunion de chantier</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= ($pageToDisplay == 'challenge') ? 'active' : ''; ?>" href="index.php?page=challenge">Challenge</a>
@@ -38,7 +38,9 @@
         </div>
     </nav>
 
-    <!-- <section id="banner">
+
+    <!-- Cette section était pour l'affichage d'une bannière spécifique pendant un temps donné
+        <section id="banner">
         <h1>Site un peu mou ? Besoin d'un remontant ?</h1>
         <p>Votre développeur préféré a <span class="banner-strong">LA</span> solution !</p>
         <p>Cliquez sur l'un des boutons ci-dessous pour découvrir l'escort qui nous charmera toute la soirée !</p>

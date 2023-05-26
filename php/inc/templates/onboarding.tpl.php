@@ -8,7 +8,8 @@ require __DIR__ . '../../database/data.php';
 </div>
 
 <div class="container-aside">
-    <div class="container">
+    <!-- Ce code était utilisé pour l'affichage du formulaire d'inscription à l'évènement
+        <div class="container">
         <form action="" method="POST" class="form">
             <div class="form-input">
                 <label class="label-text" for="name">Prénom - Nom</label>
@@ -61,7 +62,7 @@ require __DIR__ . '../../database/data.php';
                 kid.value = '0';
             });
         </script>
-    </div>
+    </div> -->
 
     <div class="aside">
         <div class="aside-answered">
