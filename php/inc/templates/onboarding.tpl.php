@@ -66,25 +66,30 @@ require __DIR__ . '../../database/data.php';
 
     <div class="aside">
         <div class="aside-answered">
-            <h3 class="aside-h3">Personnes ayant répondu</h3>
+            <h3 class="aside-h3">Personnes présentes</h3>
             <ul>
-                <?php if (!$presentName == '') : ?>
-                    <?php foreach ($presentName as $user) : ?>
-                        <li class="aside-li">
+                <?php foreach ($list_adult_present as $user) : ?>
+                    <li class="aside-li">
+                        <?php if ($user['nb_kid'] > 1) : ?>
+                            <td class="aside-td"><?= $user['name'] ?> avec leurs <?= $user['nb_kid'] ?> enfants</td>
+                        <?php elseif ($user['id'] == 26) : ?>
+                            <td class="aside-td"><?= $user['name'] ?> avec ses <?= $user['nb_kid'] ?> enfants</td>
+                        <?php elseif ($user['id'] == 27) : ?>
+                            <td class="aside-td"><?= $user['name'] ?> avec son enfant</td>
+                        <?php elseif ($user['nb_kid'] == 1) : ?>
+                            <td class="aside-td"><?= $user['name'] ?> avec leur enfant</td>
+                        <?php else: ?>
                             <td class="aside-td"><?= $user['name'] ?></td>
-                        </li>
-                    <?php endforeach; ?>
-                <?php else : ?>
-                    <li class="aside-li-nb">
-                        <td class="aside-td">0</td>
+                        <?php endif; ?>
                     </li>
-                <?php endif; ?>
+                <?php endforeach; ?>
             </ul>
-            <h3 class="aside-h3"><a href="mailto:ph.kocan@icloud.com?subject=Demande de modification&cc=grimal.jonathan@gmail.com">Besoin d'apporter une modification ou une précision ?<br>Cliquez ici</h3></a>
+            <!-- <h3 class="aside-h3"><a href="mailto:ph.kocan@icloud.com?subject=Demande de modification&cc=grimal.jonathan@gmail.com">Besoin d'apporter une modification ou une précision ?<br>Cliquez ici</h3></a> -->
         </div>
-        <div class="aside-adult-kid">
+        <!-- Ce code affiche un compteur pour le nombre d'adulte et d'enfant présent  -->
+            <div class="aside-adult-kid">
             <div class="aside-adult">
-                <h3 class="aside-h3">Adultes présents</h3>
+                <h3 class="aside-h3">Adultes</h3>
                 <ul>
                     <?php if (!$nb_adult_present == 0) : ?>
                         <?php foreach ($nb_adult_present as $user) : ?>
@@ -100,7 +105,7 @@ require __DIR__ . '../../database/data.php';
                 </ul>
             </div>
             <div class="aside-kid">
-                <h3 class="aside-h3">Enfants présents</h3>
+                <h3 class="aside-h3">Enfants</h3>
                 <ul>
                     <?php if (!$nb_kid_present == 0) : ?>
                         <?php foreach ($nb_kid_present as $user) : ?>

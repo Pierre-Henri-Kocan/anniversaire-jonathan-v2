@@ -179,7 +179,7 @@ body {
 }
 
 .aside {
-    width: 25%;
+    width: 40%;
     margin: 2rem auto;
 }
 
@@ -194,6 +194,7 @@ body {
 .aside-li {
     color: var(--color-orange);
     margin: 1rem;
+    text-align: center;
 }
 
 .aside-answered {
@@ -212,12 +213,14 @@ body {
     border: 1px solid var(--color-border);
     border-radius: .375rem;
     margin-right: 0.5rem;
+    width: 100%;
 }
 
 .aside-kid {
     border: 1px solid var(--color-border);
     border-radius: .375rem;
     margin-left: 0.5rem;
+    width: 100%;
 }
 
 .aside-li-nb {
@@ -288,7 +291,6 @@ h2 {
     
     .aside {
         width: 95%;
-
     }
 }
 
@@ -400,6 +402,248 @@ h2 {
     }
 }
 
+/* Réunion de chantier */
+
+/* .site-meeting-where {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.site-meeting-icon {
+    width: 5rem;
+}
+
+.site-meeting-where h2{
+    color: var(--color-text-light);
+    font-size: 2.5rem;
+}
+
+.site-meeting-where h3{
+    color: var(--color-text-light);
+    font-size: 2rem;
+    margin: 2rem auto;
+    font-weight: bold;
+}
+
+.site-meeting-where p{
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.site-meeting-where-picture {
+    width: 50%;
+    margin: 2rem auto;
+    box-shadow: #f2510080 0px 54px 55px, #f2510080 0px -12px 30px, #f2510080 0px 4px 6px, #f2510080 0px 12px 13px, #f2510080 0px -3px 5px;
+}
+
+.site-meeting-image {
+    width: 50%;
+    margin: 2rem;
+}
+
+p.underline {
+    color: var(--color-orange);
+    margin-top: 1rem;
+} */
+
+.accordion {
+    margin: 4rem auto;
+    width: 90%;
+}
+.accordion input {
+    display: none;
+}
+.box {
+    position: relative;
+    height: 10rem;
+    transition: all .30s ease-in-out;
+}
+.box::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      box-shadow: 0 -1px 0 var(--color-orange);
+}
+ 
+.box-title {
+    width: 90%;
+    height: 10rem;
+    padding: 0 1rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    cursor: pointer;
+    color: var(--color-text-light);
+    font-size: 2rem;
+    text-align: center;
+    -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+
+.site-meeting-icon {
+    width: 4rem;
+    margin: 0 1rem;
+}
+
+.box-content {
+    margin: auto;
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    line-height: 1.8rem;
+    text-align: center;
+    display: none;
+}
+
+.box-content-paragraph {
+    line-height: 3rem;
+}
+
+.box-content p {
+    margin: 1.5rem;
+}
+
+.box-content-text p {
+    margin: 1.3rem;
+}
+
+.site-meeting-where-picture {
+    width: 50%;
+    margin: 1.5rem auto;
+}
+
+.box-content-map {
+    width:80vw;
+    height: 50vh;
+    margin: 1rem;
+}
+
+.box-close {
+    position: absolute;
+    height: 7rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+input:checked + .box {
+    height: auto;
+    margin: 1rem 0;
+    box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+}
+
+input:checked + .box .box-title {
+    border-bottom: 1px solid var(--color-orange);
+}
+
+input:checked + .box .box-content,
+input:checked + .box .box-close {
+    display: inline-block;
+}
+
+.arrows section .box-title {
+    width: 90%;
+}
+
+.arrows section .box-title:before {
+    position: absolute;
+    display: block;
+    font-size: 1.1rem;
+    left: 1.25rem;
+    top: -2px;
+    transition: transform .15s ease-in-out;
+    color: rgba(0,0,0,.54);
+}
+
+input:checked + section.box .box-title:before {
+    transform: rotate(90deg);
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.d-block {
+    width: 50%;
+    box-shadow: 5px 5px 25px -3px var(--color-orange);
+}
+
+@media screen and (max-width: 900px) {
+    .box-title {
+        font-size: 1.5rem;
+    }
+
+    .site-meeting-icon {
+        width: 3rem;
+    }
+
+    .box-content {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .site-meeting-where-picture {
+        width: 80%;
+    }
+
+    .d-block {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .carousel-inner {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .box-title {
+        font-size: 1rem;
+    }
+    
+    .site-meeting-icon {
+        width: 2rem;
+    }
+
+    .box-content {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .site-meeting-where-picture {
+        width: 100%;
+    }
+
+    .d-block {
+        width: 100%;
+    }
+
+    .carousel-item img {
+        margin: auto;
+    }
+
+    .box-content-map {
+        height: 20vh;
+    }
+}
+
 /* Pages en construction */
 
 .construction {
@@ -415,7 +659,7 @@ h2 {
 
 /* Prank Brice */
 
-#banner {
+/* #banner {
     display: flex;
     width: 100%;
     margin: auto;
@@ -449,7 +693,7 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
+  } 
   
   .banner-button {
     background-color: #ffffff;
@@ -468,4 +712,7 @@ h2 {
     margin-bottom: 1rem;
     line-height: 1.2;
     font-weight: bold;
-  }
+  }*/
+
+
+  

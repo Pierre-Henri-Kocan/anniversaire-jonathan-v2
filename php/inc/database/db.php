@@ -23,11 +23,17 @@ $presentName = [];
 $nb_adult_present = [];
 $nb_kid_present = [];
 
-// Affichage de la listes des personnes qui seront présentes
+// Affichage de la listes des personnes qui se sont enregistrées
 $presentNameSql = 'SELECT * FROM `user`';
 $pdoStatement = $pdo->query($presentNameSql);
 $presentName = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($presentName);
+
+// Affichage du nombre d'adultes qui seront présents
+$list_adult_present_sql = 'SELECT * FROM `user` WHERE `is_present` = "true"';
+$pdoStatement = $pdo->query($list_adult_present_sql);
+$list_adult_present = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+// var_dump($list_adult_present);
 
 // Affichage du nombre d'adultes qui seront présents
 $nb_adult_present_sql = 'SELECT SUM(`nb_adult`) AS "number" FROM `user` WHERE `is_present` = "true"';

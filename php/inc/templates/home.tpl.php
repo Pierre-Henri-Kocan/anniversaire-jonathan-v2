@@ -21,5 +21,5 @@
     <p class="birthday-text">Bon courage,</p>
     <p class="birthday-text"><span class="italic-text">Le Webmaster</span></p>
     </p>
-    <a class="btn btn-primary btn-custom" href="index.php?page=onboarding">Je m'enregistre</a>
+    <!-- <a class="btn btn-primary btn-custom" href="index.php?page=onboarding">Je m'enregistre</a> -->
 </div>

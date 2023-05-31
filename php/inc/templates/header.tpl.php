@@ -28,7 +28,7 @@
                         <a class="nav-link <?= ($pageToDisplay == 'onboarding') ? 'active' : ''; ?>" href="index.php?page=onboarding">On boarding</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= ($pageToDisplay == 'goodtips') ? 'active' : ''; ?>" href="index.php?page=goodtips">Réunion de chantier</a>
+                        <a class="nav-link <?= ($pageToDisplay == 'meeting') ? 'active' : ''; ?>" href="index.php?page=meeting">Réunion de chantier</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= ($pageToDisplay == 'challenge') ? 'active' : ''; ?>" href="index.php?page=challenge">Challenge</a>
