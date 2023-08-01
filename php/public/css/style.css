@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
 
 :root{
     --color-text: #ffffff;
@@ -17,11 +17,24 @@ body {
 .punchline {
     font-style: italic;
     font-size: 1.5rem;
-    margin: 2rem auto;
+    margin: 2rem auto 0.5rem auto;
     padding: 1rem;
     width: 80%;
     text-align: center;
     color: var(--color-text);
+    line-height: 2.5rem;
+}
+
+.punchline strong {
+    color: var(--color-orange);
+}
+
+.punchline-autor {
+    font-size: 0.8rem;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    color: var(--color-text-light);
 }
 
 .standard-banner h2 {
@@ -132,11 +145,22 @@ body {
     text-decoration: underline;
 }
 
-
 .home-text {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.teams {
+    display: flex;
+    justify-content: center;
+}
+
+.teams-video {
+    width: 70%;
+    height: auto;
+    margin: 5rem 2rem;
+    box-shadow: 5px 5px 25px -3px var(--color-orange);
 }
 
 @media screen and (max-width: 900px) {
@@ -156,6 +180,10 @@ body {
         font-size: 1rem;
         width: 90%;
     }
+    .teams-video {
+        width: 90%;
+    }
+
 }
 
 /* Page d'inscription */
@@ -188,7 +216,8 @@ body {
     background-color: var(--color-bg-input);
     text-align: center;
     padding: 1rem 0.5rem;
-    line-height: 1.2;
+    line-height: 2rem;
+    font-size: 1rem;
 }
 
 .aside-li {
@@ -520,6 +549,11 @@ p.underline {
     margin: 1.3rem;
 }
 
+.box-content-text strong {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
 .site-meeting-where-picture {
     width: 50%;
     margin: 1.5rem auto;
@@ -585,6 +619,16 @@ input:checked + section.box .box-title:before {
     box-shadow: 5px 5px 25px -3px var(--color-orange);
 }
 
+.teams-list {
+    line-height: 5rem;
+}
+
+.aside-li a {
+    font-size: 1rem;
+    margin: 1rem;
+    line-height: 1.2;
+}
+
 @media screen and (max-width: 900px) {
     .box-title {
         font-size: 1.5rem;
@@ -610,6 +654,10 @@ input:checked + section.box .box-title:before {
 
     .carousel-inner {
         justify-content: space-between;
+    }
+
+    .box-content-paragraph {
+        line-height: 2rem;
     }
 }
 
@@ -641,6 +689,15 @@ input:checked + section.box .box-title:before {
 
     .box-content-map {
         height: 20vh;
+    }
+
+    .box-content-text strong {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .box-content-paragraph {
+        line-height: 1.5rem;
     }
 }
 
@@ -714,5 +771,67 @@ input:checked + section.box .box-title:before {
     font-weight: bold;
   }*/
 
+/* Pages des équipes */
 
+.standard-banner strong {
+    font-weight: 600;
+}
+
+.team-title {
+    border: 1px solid var(--color-orange);
+    border-radius: .375rem;
+    width: auto;
+    margin: 0 10rem;
+    font-weight: 600;
+}
+
+.team-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.fun-picture {
+    width: 40%;
+    margin: 2rem;
+    box-shadow: 5px 5px 25px -3px var(--color-orange);
+}
+
+.team-text {
+    color: var(--color-orange);
+}
+
+@media screen and (max-width: 900px) {
+    .fun-picture {
+        width: 70%;
+    }
+
+    .team-page {
+        margin-top: 1.5rem;
+    }
+
+    .team-title {
+        margin: 0 5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .fun-picture {
+        width: 90%;
+    }
+
+    .team-page {
+        margin-top: 1rem;
+    }
+
+    .team-title {
+        margin: 0 3rem;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .team-title {
+        margin: 0 1rem;
+    }
+}
   

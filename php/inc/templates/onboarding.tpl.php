@@ -70,15 +70,15 @@ require __DIR__ . '../../database/data.php';
             <ul>
                 <?php foreach ($list_adult_present as $user) : ?>
                     <li class="aside-li">
-                        <?php if ($user['nb_kid'] > 1) : ?>
-                            <td class="aside-td"><?= $user['name'] ?> avec leurs <?= $user['nb_kid'] ?> enfants</td>
-                        <?php elseif ($user['id'] == 26) : ?>
+                        <?php if ($user['id'] == 26) : ?>
                             <td class="aside-td"><?= $user['name'] ?> avec ses <?= $user['nb_kid'] ?> enfants</td>
                         <?php elseif ($user['id'] == 27) : ?>
                             <td class="aside-td"><?= $user['name'] ?> avec son enfant</td>
                         <?php elseif ($user['nb_kid'] == 1) : ?>
                             <td class="aside-td"><?= $user['name'] ?> avec leur enfant</td>
-                        <?php else: ?>
+                        <?php elseif ($user['nb_kid'] > 1) : ?>
+                            <td class="aside-td"><?= $user['name'] ?> avec leurs <?= $user['nb_kid'] ?> enfants</td>
+                        <?php else : ?>
                             <td class="aside-td"><?= $user['name'] ?></td>
                         <?php endif; ?>
                     </li>
@@ -87,7 +87,7 @@ require __DIR__ . '../../database/data.php';
             <!-- <h3 class="aside-h3"><a href="mailto:ph.kocan@icloud.com?subject=Demande de modification&cc=grimal.jonathan@gmail.com">Besoin d'apporter une modification ou une précision ?<br>Cliquez ici</h3></a> -->
         </div>
         <!-- Ce code affiche un compteur pour le nombre d'adulte et d'enfant présent  -->
-            <div class="aside-adult-kid">
+        <div class="aside-adult-kid">
             <div class="aside-adult">
                 <h3 class="aside-h3">Adultes</h3>
                 <ul>

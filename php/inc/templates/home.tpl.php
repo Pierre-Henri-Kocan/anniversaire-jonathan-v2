@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="home-text">
+<!-- <div class="home-text">
     <p class="birthday-text">Si vous êtes en train de lire ces quelques lignes, cela signifie que vous faites partie des <span class="bold-text">rares privilégiés</span> à être sélectionnés.</p>
     <p class="light-text">- pour supporter Jonathan et ses 40 ans -</p>
     <p class="birthday-text">Ce site a pour vocation de partager des informations utiles sur l'organisation de cet anniversaire.</p>
@@ -20,6 +20,13 @@
     <p class="light-text"><br>- mieux vaut participer qu’être parti pisser -</p>
     <p class="birthday-text">Bon courage,</p>
     <p class="birthday-text"><span class="italic-text">Le Webmaster</span></p>
-    </p>
-    <!-- <a class="btn btn-primary btn-custom" href="index.php?page=onboarding">Je m'enregistre</a> -->
+    </p> -->
+    <!-- <a class="btn btn-primary btn-custom" href="index.php?page=onboarding">Je m'enregistre</a>
+
+</div> -->
+<p class="punchline">Après avoir regardé la vidéo, rendez-vous sur la page <strong><a href="index.php?page=meeting">Réunion de chantier</a></strong>, section <strong><a href="index.php?page=meeting">Fiche de poste</a></strong>.</p>
+<div class="teams">
+    <video class="teams-video" controls>
+        <source src="/php/public/images/teams/dresscode.mp4" type=video/mp4>
+    </video>
 </div>

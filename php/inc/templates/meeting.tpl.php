@@ -1,3 +1,12 @@
+<?php
+require __DIR__ . '../../database/db.php';
+require __DIR__ . '../../database/data.php';
+?>
+
+<div class="standard-banner">
+    <h2>Réunion de chantier</h2>
+</div>
+
 <nav class="accordion arrows">
     <input type="radio" name="accordion" id="cb1" />
     <section class="box">
@@ -5,7 +14,7 @@
         <label class="box-close" for="acc-close"></label>
         <div class="box-content">
             <div class="box-content-text">
-                <p>Le Lys Réception</p>
+                <p><strong>Le Lys Réception</strong></p>
                 <p>Avenue Georges Clemenceau</p>
                 <p>ZAC de L'Orme</p>
                 <p>95270 - Viarmes</p>
@@ -84,7 +93,17 @@
         <label class="box-title" for="cb4"><img class="site-meeting-icon" src="/php/public/images/slip.png" alt="">Fiche de poste</label>
         <label class="box-close" for="acc-close"></label>
         <div class="box-content">
-            <img class="site-meeting-where-picture" src="/php/public/images/construction-couture.png" alt="">
+        <div class="aside"> 
+            <div class="aside-answered">
+                <h3 class="aside-h3">Envie de connaître votre équipe ?<br/> Cliquez sur votre nom !</h3>
+                <ul>
+                    <?php foreach ($list_adult_present as $user) : ?>
+                        <li class="aside-li">
+                            <a href="index.php?page=<?= $user['team'] ?>"><td><?= $user['name'] ?></td></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
         </div>
     </section>
 
