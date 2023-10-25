@@ -2,9 +2,9 @@
 
 <div class="birthday-banner">
     <img class="birthday-logo" src="/php/public/images/speed-limit-2.png" alt="">
-    <div class="birthday-title">
+    <!-- <div class="birthday-title">
         <img class="birthday-save" src="/php/public/images/save-date.png" alt="">
-    </div>
+    </div> -->
 </div>
 
 <!-- <div class="home-text">
@@ -24,9 +24,35 @@
     <!-- <a class="btn btn-primary btn-custom" href="index.php?page=onboarding">Je m'enregistre</a>
 
 </div> -->
-<p class="punchline">Après avoir regardé la vidéo, rendez-vous sur la page <strong><a href="index.php?page=meeting">Réunion de chantier</a></strong>, section <strong><a href="index.php?page=meeting">Fiche de poste</a></strong>.</p>
+<!-- <p class="punchline">Après avoir regardé la vidéo, rendez-vous sur la page <strong><a href="index.php?page=meeting">Réunion de chantier</a></strong>, section <strong><a href="index.php?page=meeting">Fiche de poste</a></strong>.</p>
 <div class="teams">
     <video class="teams-video" controls>
         <source src="/php/public/images/teams/dresscode.mp4" type=video/mp4>
     </video>
+</div> -->
+
+<div class="global-compteur">
+    <p class="global-compteur-text">Anniversaire de Jonathan dans :</p>
+    <p class="global-compteur-text-small">(son vrai anniv' hein, pas la fiesta)</p>
+    
+    <div id="compteur"></div>
 </div>
+
+<script>
+    var dateCible = new Date("2023-12-04").getTime();
+    var miseAJourCompteur = setInterval(function() {
+    var dateActuelle = new Date().getTime();
+    var tempsRestant = dateCible - dateActuelle;
+
+    var jours = Math.floor(tempsRestant / (1000 * 60 * 60 * 24));
+    var heures = Math.floor((tempsRestant % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((tempsRestant % (1000 * 60 * 60)) / (1000 * 60));
+    var secondes = Math.floor((tempsRestant % (1000 * 60)) / 1000);
+
+    document.getElementById("compteur").innerHTML =  jours + "  jours, " + heures + "heures, " + minutes + " minutes, " + secondes + " secondes";
+        if (tempsRestant < 0) {
+            clearInterval(miseAJourCompteur);
+            document.getElementById("compteur").innerHTML = "C'est le jour J !";
+        }
+    }, 1000);
+</script>

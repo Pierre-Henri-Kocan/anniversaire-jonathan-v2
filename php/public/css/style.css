@@ -163,6 +163,38 @@ body {
     box-shadow: 5px 5px 25px -3px var(--color-orange);
 }
 
+.global-compteur {
+    margin: 2rem auto;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+}
+
+.global-compteur-text {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    padding: 2rem 1rem 0 1rem;
+}
+
+.global-compteur-text-small {
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+#compteur {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-orange);
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+}
+
 @media screen and (max-width: 900px) {
       .birthday-text {
         width: 80%;
@@ -769,7 +801,7 @@ input:checked + section.box .box-title:before {
     margin-bottom: 1rem;
     line-height: 1.2;
     font-weight: bold;
-  }*/
+  } */
 
 /* Pages des équipes */
 
