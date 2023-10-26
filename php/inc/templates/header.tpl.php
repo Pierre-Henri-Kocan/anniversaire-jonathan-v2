@@ -25,6 +25,9 @@
                         <a class="nav-link <?= ($pageToDisplay == 'home') ? 'active' : ''; ?>" href="./">Accueil</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link <?= ($pageToDisplay == 'galerie') ? 'active' : ''; ?>" href="index.php?page=galerie">Galerie</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link <?= ($pageToDisplay == 'onboarding') ? 'active' : ''; ?>" href="index.php?page=onboarding">On boarding</a>
                     </li>
                     <li class="nav-item">
