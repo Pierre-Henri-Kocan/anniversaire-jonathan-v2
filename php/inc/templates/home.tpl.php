@@ -32,7 +32,7 @@
 </div> -->
 
 <div class="global-compteur">
-    <p class="global-compteur-text">Anniversaire de Jonathan dans :</p>
+    <p class="global-compteur-text">Anniversaire dans :</p>
     <p class="global-compteur-text-small">(son vrai anniv' hein, pas la fiesta)</p>
     
     <div id="compteur"></div>
@@ -49,7 +49,7 @@
     var minutes = Math.floor((tempsRestant % (1000 * 60 * 60)) / (1000 * 60));
     var secondes = Math.floor((tempsRestant % (1000 * 60)) / 1000);
 
-    document.getElementById("compteur").innerHTML =  jours + "  jours, " + heures + "heures, " + minutes + " minutes, " + secondes + " secondes";
+    document.getElementById("compteur").innerHTML =  jours + "  jours, " + heures + "h, " + minutes + " min, " + secondes + " sec";
         if (tempsRestant < 0) {
             clearInterval(miseAJourCompteur);
             document.getElementById("compteur").innerHTML = "C'est le jour J !";
