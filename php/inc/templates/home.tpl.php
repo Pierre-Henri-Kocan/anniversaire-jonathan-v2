@@ -1,4 +1,14 @@
-
+<div class="form-container">
+<?php
+    // Vérifiez si le paramètre d'URL indiquant le succès est présent
+    if (isset($_GET["upload"]) && $_GET["upload"] == "success") {
+        echo '<div class="alert-custom" role="alert">Enregistrement réussi ! Merci</div>';
+    }
+    elseif (isset($_GET["upload"]) && $_GET["upload"] == "error") {
+        echo '<div class="alert-custom" role="alert">L\'enregistrement a echoué</div>';
+    }
+?>
+</div>
 
 <div class="birthday-banner">
     <img class="birthday-logo" src="/php/public/images/speed-limit-2.png" alt="">

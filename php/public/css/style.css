@@ -250,10 +250,31 @@ body {
     font-size: 1.5rem;
 }
 
+.upload-text {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem 1rem 1.5rem 1rem;
+}
+
+.upload-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 1rem;
+}
+
 @media screen and (max-width: 500px) {
     .alert-custom {
-
         font-size: 1rem;
+    }
+    .upload-text {
+        font-size: 1.2rem;
     }
 
 }
